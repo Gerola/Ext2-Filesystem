@@ -15,3 +15,5 @@
 + cat
 + symlink
 + cp
++ lseek
++ quit
