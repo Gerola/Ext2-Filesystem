@@ -123,6 +123,11 @@ int rmdirs(char* pathname)
 		printf("Can't delete this dir\n");
 		return;
 	}
+	if(strcmp(pathname,"")==0)
+	{
+		printf("Need a name\n");
+		return;
+	}
 	
 	tokenize_rm(pathname);
 	int removing = getino(pathname);//get inode of removing directory
