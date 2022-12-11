@@ -90,6 +90,11 @@ int my_read(int fd, char* buf, int nbytes)
 }
 
 int my_cat(char* filename) {
+	if(strcmp(filename,"")==0)
+	{
+		printf("Need a file to cat\n");
+		return;
+	}
     char mybuf[1024], dummy = 0;  // a null char at end of mybuf[ ]
     int n;
 
