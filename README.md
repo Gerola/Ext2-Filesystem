@@ -1,5 +1,5 @@
 ## Ext2-Filesystem
-  This is an Ext2 filesystem that is compatible with Linux. It is recommended to be run on a VM or through WSL. Some packages may need to be installed before the program will run properly. In the files there are two disks currently, disk2 and mydisk. With disk2 having files currently on it while mydisk is a disk with nothing. To run the program run `./mk` or  `sudo ./mk`  to create a new disk. From there `a.out` should be generated and can be called instead of `./mk` or `sudo ./mk` with the command being `./a.out`. In order to change the disk the program reads change `char *disk = "disk2";` on line 82 to the disk you would like to use for the program.
+  This is an Ext2 filesystem that is compatible with Linux. It is recommended to be run on a VM or through WSL. Some packages may need to be installed before the program will run properly. In addition to the packages the commands ` chmod +x mk ` and ` chmod +x mkdisk ` will need to be run with mk being used to create the a.out and mkdisk for creating new disk images. When first running the program run `./mk` to have a.out generated or  `sudo ./mk` to have a.out and a disk image generated. From there `a.out` can be called instead of `./mk` or `sudo ./mk` with the command being `./a.out`. There are two disks in the files and by default the program will use disk2. There are multiple ways to change the disk the program uses. One of which is to change `char *disk = "disk2";` on line 82 in main.c to the disk you would like to use for the program. The other is to run ` ./a.out [diskname] ` with the diskname being the disk you want to use.
 
 ## The Following Commands are Supported
 + mkdir
@@ -16,4 +16,5 @@
 + symlink
 + cp
 + lseek
++ pfd
 + quit
