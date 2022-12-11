@@ -27,6 +27,11 @@ int tokenize_dir(char* path)
 //split pathname and directory to be created...
 int mkdirs(char* pathname)
 {
+	if(strcmp(pathname,"") == 0)
+	{
+		printf("Please provide a name\n");
+		return;
+	}
 	tokenize_dir(pathname);
 	pathname[strlen(pathname)-strlen(names[numbers-1])-1] = 0;//look over
 	//	a/b/c
@@ -150,6 +155,11 @@ int enter_name(MINODE* pip, int ino, char* name)
 
 int creats(char *pathname)
 {
+	if(strcmp(pathname,"") == 0)
+	{
+		printf("Please provide a name\n");
+		return;
+	}
 	tokenize_dir(pathname);
 	pathname[strlen(pathname)-strlen(names[numbers-1])-1] = 0;//look over
 	//	a/b/c
