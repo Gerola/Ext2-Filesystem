@@ -83,6 +83,10 @@ char *disk = "disk2";     // change this to YOUR virtual
 
 int main(int argc, char *argv[ ])
 {
+	if(argc > 1 && strcmp(argv[0],"./a.out")== 0)
+	{
+		disk = argv[1];	
+	}
   int ino;
   char buf[BLKSIZE];
   char bufferread[256];
